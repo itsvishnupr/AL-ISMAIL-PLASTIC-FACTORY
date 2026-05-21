@@ -555,8 +555,28 @@ export default function Home() {
             copy="A dark-floor manufacturing mindset powers every stage: material selection, extrusion, conversion, inspection, packing, and reliable dispatch."
           />
           <div className="mt-16 grid gap-10 lg:grid-cols-[1fr_.9fr]">
-            <div className="overflow-hidden shadow-premium">
-              <div className="h-[430px] bg-cover bg-center" style={{ backgroundImage: `url(${factoryImage})` }} />
+            <div className="group relative min-h-[430px] overflow-hidden border border-white/12 bg-industrial-charcoal shadow-premium">
+              <video
+                className="absolute inset-0 h-full w-full object-cover opacity-[.82] transition duration-700 group-hover:scale-105"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster="/catalog/p05-02-X6.jpg"
+                aria-label="Manufacturing machinery playback"
+              >
+                <source src="/brand/manufacturing-loop.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(16,17,20,.82),rgba(16,17,20,.24),rgba(155,28,28,.34))]" />
+              <div className="absolute inset-0 bg-steel-grid bg-[length:54px_54px] opacity-[.18]" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+                <div className="dark-glass max-w-sm p-5">
+                  <p className="font-display text-xs font-semibold uppercase tracking-[0.24em] text-industrial-silver">Live Process View</p>
+                  <h3 className="mt-3 font-display text-2xl font-bold">Precision manufacturing in motion</h3>
+                  <p className="mt-3 text-sm leading-6 text-white/68">A compact loop for extrusion, conversion, inspection, and dispatch workflows.</p>
+                </div>
+              </div>
             </div>
             <div className="grid content-center gap-5">
               {process.map((step, index) => (
