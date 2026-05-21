@@ -1,0 +1,15 @@
+node_modules/
+.next/
+out/
+dist/
+
+*.log
+.env
+.env.*
+!.env.example
+
+catalog-extract/
+qa-screenshots/
+
+.DS_Store
+Thumbs.db
