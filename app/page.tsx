@@ -37,7 +37,7 @@ const heroImage =
   "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1800&q=85";
 
 const factoryImage =
-  "https://images.unsplash.com/photo-1581093458791-9d15482442f6?auto=format&fit=crop&w=1200&q=85";
+  "/catalog/p05-02-X6.jpg";
 
 const warehouseImage =
   "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=85";
@@ -389,8 +389,11 @@ export default function Home() {
             transition={{ duration: 0.75 }}
             className="relative min-h-[560px]"
           >
-            <div className="absolute inset-x-0 top-0 h-[430px] bg-cover bg-center shadow-premium" style={{ backgroundImage: `url(${factoryImage})` }} />
-            <div className="absolute bottom-0 left-5 right-0 bg-industrial-charcoal p-7 text-white shadow-premium sm:left-12">
+            <div className="absolute inset-x-0 top-0 h-[430px] overflow-hidden bg-industrial-charcoal shadow-premium">
+              <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${factoryImage})` }} />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(16,17,20,.02),rgba(16,17,20,.18))]" />
+            </div>
+            <div className="absolute bottom-0 left-5 right-0 bg-[#171717] p-7 text-white shadow-premium sm:left-12">
               <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-industrial-silver">Founded 1983</p>
               <p className="mt-4 text-3xl font-bold">41+ years of PE film industry experience</p>
               <div className="mt-6 grid grid-cols-2 gap-4 text-sm text-white/72">
@@ -843,7 +846,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-[#0b0c0f] px-4 py-8 text-center text-sm text-white/52 sm:px-6">
+      <footer className="bg-[#0b0c0f] px-4 py-8 text-center text-sm text-white sm:px-6">
         <p>© 2026 Al Ismail Plastic Factory. Premium plastic manufacturing and industrial packaging solutions since 1983.</p>
       </footer>
 
